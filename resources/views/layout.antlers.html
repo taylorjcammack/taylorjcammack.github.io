@@ -7,8 +7,8 @@
         <title>{{ title ?? site:name }}</title>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body>
-      <div>
+    <body class="p-6">
+      <div class="max-w-[760px] mx-auto">
         {{ template_content }}
       </div>
     </body>

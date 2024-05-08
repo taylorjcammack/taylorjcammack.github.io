@@ -2,4 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.prose {
+  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  ul {
+    li {
+      margin-block: 0 !important;
+    }
+  }
+}
+
 /* This is all you. */

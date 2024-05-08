@@ -1,3 +1,38 @@
-<div>
- Howdy!
+<div class="mb-12">
+  <h1 class="text-[32px] font-bold">
+    Howdy!
+  </h1>
+
+  <div class="prose">
+    <p>My name is Taylor.</p>
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-[20px]">
+  <section class="border p-4">
+    <div class="prose">
+      <h2>🧰 The Stack</h2>
+      <ul>
+        <li>Statamic + SSG</li>
+        <li>Github Pages</li>
+        <li>Tailwind + Typography plugin</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="border p-4">
+    <div class="prose">
+      <h2>
+        😬 The Posts
+      </h2>
+      <ul>
+        {{ collection:posts as="posts" limit="10" sort="date:desc" }}
+          {{ posts }}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+          {{ /posts }}
+        {{ /collection:posts }}
+      </ul>
+    </div>
+  </section>
+
 </div>
