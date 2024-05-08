@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
 .prose {
   h2 {
     margin-bottom: 10px;

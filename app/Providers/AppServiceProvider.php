@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
+use Statamic\StaticSite\SSG;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +25,9 @@ class AppServiceProvider extends ServiceProvider
         //     'resources/js/cp.js',
         //     'resources/css/cp.css',
         // ]);
+
+      SSG::after(function () {
+        file_put_contents(base_path('docs/CNAME'), 'taylorcammack.com');   
+      });
     }
 }
