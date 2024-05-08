@@ -1,36 +1,52 @@
-<div class="mb-12">
-  <h1 class="text-[32px] font-bold">
-    Howdy!
-  </h1>
-
-  <div class="prose">
-    <p>My name is Taylor.</p>
+<div class="flex items-center gap-4 mt-4 mb-10">
+  <img src="{{ glide src="/assets/hello.jpg" }}" class="w-16 h-auto rounded-full shadow-lg" />
+  
+  <div>
+    <h1 class="text-[24px] font-bold">
+      Howdy!
+    </h1>
+  
+    <div class="prose">
+      <p>My name is Taylor. I'm a web developer based out of East Texas.</p>
+    </div>
   </div>
 </div>
 
 <div class="grid md:grid-cols-2 gap-[20px]">
-  <section class="border p-4">
-    <div class="prose">
-      <h2>🧰 The Stack</h2>
-      <ul>
-        <li>Statamic + SSG</li>
-        <li>Github Pages</li>
-        <li>Tailwind + Typography plugin</li>
-      </ul>
-    </div>
-  </section>
   
-  <section class="border p-4">
+  <section class="p-4 bg-white border md:col-start-2 md:row-start-1 md:row-span-2">
     <div class="prose">
-      <h2>
-        😬 The Posts
-      </h2>
+      <h2 class="flex items-center gap-3"><span class="text-[14px]">📬</span> Posts</h2>
       <ul>
         {{ collection:posts as="posts" limit="10" sort="date:desc" }}
           {{ posts }}
             <li><a href="{{ url }}">{{ title }}</a></li>
           {{ /posts }}
         {{ /collection:posts }}
+      </ul>
+    </div>
+  </section>
+  
+  <section class="p-4 bg-white border">
+    <div class="prose">
+      <h2 class="flex items-center gap-3"><span class="text-[14px]">🪴</span> Projects</h2>
+      <ul>
+        <li>
+          <a class="flex items-center gap-2" href="https://open.spotify.com/artist/61zYNJrsWJAlPpYpUM7bgi?si=WDHIH8FbTECXj28-NCwKPQ" target="_blank">
+            Winnower {{ svg src="assets/spotify" class="w-4 h-auto" }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="p-4 bg-white border">
+    <div class="prose">
+      <h2 class="flex items-center gap-3"><span class="text-[14px]">🧰</span> This Site</h2>
+      <ul>
+        <li>Statamic<sup>❤️</sup> + Static Site Generation</li>
+        <li>Github Pages</li>
+        <li>Tailwind + Typography plugin</li>
       </ul>
     </div>
   </section>
