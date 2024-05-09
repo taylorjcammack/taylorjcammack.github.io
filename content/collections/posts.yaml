@@ -2,7 +2,7 @@ title: Posts
 template: posts/show
 layout: layout
 revisions: false
-route: '{year}{month}{day}-{slug}'
+route: '{year}-{month}-{day}-{slug}'
 date: true
 sort_dir: asc
 date_behavior:
