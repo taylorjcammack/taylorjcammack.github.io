@@ -13,7 +13,7 @@ tabs:
               validate:
                 - required
           -
-            handle: text
+            handle: content
             field:
               buttons:
                 - h2
@@ -29,12 +29,27 @@ tabs:
                 - horizontalrule
                 - quote
                 - anchor
-                - image
                 - table
                 - removeformat
               type: bard
-              display: Text
+              display: Content
               container: assets
+              sets:
+                image:
+                  display: Image
+                  icon: media-image-camera
+                  sets:
+                    image:
+                      display: Image
+                      icon: media-image-camera
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            folder: posts
+                            type: assets
+                            display: Image
   sidebar:
     display: Sidebar
     sections:

@@ -15,7 +15,13 @@
   
   <div class="mt-5">
     <div class="prose max-w-none">
-      {{ text }}
+      {{ content }}
+        {{ if type == 'text' }}
+          {{ text }}
+        {{ elseif type == "image" }}
+          <img src="{{ glide:image }}" alt="{{ image:alt }}" class="w-full h-auto">
+        {{ /if }}
+      {{ /content }}
     </div>
   </div>
 </div>
