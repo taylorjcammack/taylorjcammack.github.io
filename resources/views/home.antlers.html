@@ -22,7 +22,7 @@
       {{ collection:posts as="posts" limit="10" sort="date:desc" }}
         {{ posts }}
           <div class="pb-3 border-b">
-            <a href="{{ url }}" class="hover:opacity-70 transition flex justify-between items-center gap-[6px]">
+            <a href="{{ url }}" class="hover:opacity-70 transition flex justify-between items-center gap-x-[15px]">
               <p>{{ title }}</p>
               <p class="font-mono text-xs text-gray-500">{{ date format="m.d.y" }}</p>
             </a>
