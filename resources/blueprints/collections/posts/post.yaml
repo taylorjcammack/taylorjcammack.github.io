@@ -35,8 +35,8 @@ tabs:
               display: Content
               container: assets
               sets:
-                image:
-                  display: Image
+                main:
+                  display: Main
                   icon: media-image-camera
                   sets:
                     image:
@@ -57,6 +57,15 @@ tabs:
                             type: toggle
                             display: 'Halfisize It'
                             width: 25
+                    video:
+                      display: Video
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          handle: video
+                          field:
+                            type: video
+                            display: Video
   sidebar:
     display: Sidebar
     sections:
@@ -76,3 +85,11 @@ tabs:
               default: now
               validate:
                 - required
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select

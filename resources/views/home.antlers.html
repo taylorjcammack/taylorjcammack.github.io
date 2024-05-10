@@ -6,7 +6,7 @@
       Howdy!
     </h1>
   
-    <div class="prose">
+    <div class="prose leading-[1.5]">
       <p>My name is Taylor. I'm a web developer based out of East Texas.</p>
     </div>
   </div>
@@ -20,9 +20,9 @@
       {{ collection:posts as="posts" limit="10" sort="date:desc" }}
         {{ posts }}
           <div class="pb-3 border-b">
-            <a href="{{ url }}" class="hover:opacity-70 transition flex justify-between items-center gap-x-[15px]">
+            <a href="{{ url }}" class="hover:opacity-70 transition flex justify-start items-center gap-x-[15px]">
+              <p class="font-mono text-xs text-gray-500 translate-y-[1px]">{{ date format="m.d.y" }}</p>
               <p>{{ title }}</p>
-              <p class="font-mono text-xs text-gray-500">{{ date format="m.d.y" }}</p>
             </a>
           </div>
         {{ /posts }}
@@ -49,6 +49,20 @@
   </section>
 
   <section class="p-4 bg-white border md:col-span-3">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📚</span> Books</h2>
+    <div class="prose">
+      <p class="font-mono text-gray-400 font-italic"> idk maybe</p>
+    </div>
+  </section>
+
+  <section class="p-4 bg-white border md:col-span-5">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📼</span> Movies</h2>
+    <div class="prose">
+      <p class="font-mono text-gray-400 font-italic"> Coming soon-ish</p>
+    </div>
+  </section>
+
+  <section class="p-4 bg-white border md:col-span-3">
     <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">🧰</span> This Site</h2>
     <div class="prose">
       <ul>
@@ -59,18 +73,6 @@
     </div>
   </section>
 
-  <section class="p-4 bg-white border md:col-span-5">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📚</span> Books</h2>
-    <div class="prose">
-      <p class="font-mono text-gray-400 font-italic"> Coming soon maybe</p>
-    </div>
-  </section>
 
-  <section class="p-4 bg-white border md:col-span-3">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📼</span> Movies</h2>
-    <div class="prose">
-      <p class="font-mono text-gray-400 font-italic"> Coming soon-ish</p>
-    </div>
-  </section>
 
 </div>
