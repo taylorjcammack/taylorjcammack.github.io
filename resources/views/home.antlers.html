@@ -12,12 +12,10 @@
   </div>
 </div>
 
-<div class="grid gap-2 md:grid-cols-[0.75fr_1fr] md:gap-4">
+<div class="grid gap-2 md:grid-cols-8 md:gap-4">
   
-  <section class="p-4 bg-white border md:col-start-2 md:row-start-1 md:row-span-2">
-    <div class="prose">
-      <h2 class="flex items-center gap-3"><span class="text-[14px]">📬</span> Posts</h2>
-    </div>
+  <section class="p-4 bg-white border md:col-start-4 md:col-span-5 md:row-start-1 md:row-span-2">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📬</span> Posts</h2>
     <div class="space-y-2">
       {{ collection:posts as="posts" limit="10" sort="date:desc" }}
         {{ posts }}
@@ -32,9 +30,9 @@
     </div>
   </section>
   
-  <section class="p-4 bg-white border">
+  <section class="p-4 bg-white border md:col-span-3">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">🪴</span> Links</h2>
     <div class="prose">
-      <h2 class="flex items-center gap-3"><span class="text-[14px]">🪴</span> Links</h2>
       <ul>
         <li>
           <a class="flex items-center gap-2" href="https://open.spotify.com/artist/61zYNJrsWJAlPpYpUM7bgi?si=WDHIH8FbTECXj28-NCwKPQ" target="_blank">
@@ -50,14 +48,28 @@
     </div>
   </section>
 
-  <section class="p-4 bg-white border">
+  <section class="p-4 bg-white border md:col-span-3">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">🧰</span> This Site</h2>
     <div class="prose">
-      <h2 class="flex items-center gap-3"><span class="text-[14px]">🧰</span> This Site</h2>
       <ul>
-        <li>Statamic<sup>❤️</sup> + Static Site Generation</li>
+        <li>Statamic<sup>❤️</sup> w/ SSG</li>
         <li>Github Pages</li>
-        <li>Tailwind + Typography plugin</li>
+        <li>Tailwind w/ Typography</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="p-4 bg-white border md:col-span-5">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📚</span> Books</h2>
+    <div class="prose">
+      <p class="font-mono text-gray-400 font-italic"> Coming soon maybe</p>
+    </div>
+  </section>
+
+  <section class="p-4 bg-white border md:col-span-3">
+    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📼</span> Movies</h2>
+    <div class="prose">
+      <p class="font-mono text-gray-400 font-italic"> Coming soon-ish</p>
     </div>
   </section>
 
