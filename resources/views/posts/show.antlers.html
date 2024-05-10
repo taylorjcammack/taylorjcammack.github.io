@@ -8,7 +8,7 @@
     <p class="text-gray-400 text-[14px] uppercase font-medium">
       {{ date format="F j, Y"}}
     </p>
-    <h1 class="text-[clamp(1.5rem,1.2857rem+1.1429vw,2rem)] font-semibold">
+    <h1 class="text-[clamp(1.5rem,1.2857rem+1.1429vw,2rem)] font-medium">
       {{ title }}
     </h1>
   </div>
@@ -19,9 +19,28 @@
         {{ if type == 'text' }}
           {{ text }}
         {{ elseif type == "image" }}
-          <img src="{{ glide:image }}" alt="{{ image:alt }}" class="w-full h-auto">
+          <div class="{{ halfisize_it ?= 'md:max-w-[50%]'}}">
+            <img 
+              src="{{ glide:image }}" 
+              alt="{{ image:alt }}" 
+              class="w-full h-auto border-2"
+            >
+          </div>
         {{ /if }}
       {{ /content }}
     </div>
   </div>
+
+  {{ if tags }}
+    <div class="pt-3 mt-8 border-t">
+      <p class="font-bold text-gray-800 uppercase text-[13px] mb-2">
+        🏷️ Tags
+      </p>
+      <div class="flex gap-2">
+        {{ tags }}
+          <p class="px-2 py-1 text-sm font-medium bg-[#fff2e2] border border-[#f7d0a0] rounded">{{ title }}</p>
+        {{ /tags }}
+      </div>
+    </div>
+  {{ /if }}
 </div>

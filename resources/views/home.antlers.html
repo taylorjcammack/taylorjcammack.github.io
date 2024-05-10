@@ -12,18 +12,23 @@
   </div>
 </div>
 
-<div class="grid gap-2 md:grid-cols-2 md:gap-4">
+<div class="grid gap-2 md:grid-cols-[0.75fr_1fr] md:gap-4">
   
   <section class="p-4 bg-white border md:col-start-2 md:row-start-1 md:row-span-2">
     <div class="prose">
       <h2 class="flex items-center gap-3"><span class="text-[14px]">📬</span> Posts</h2>
-      <ul>
-        {{ collection:posts as="posts" limit="10" sort="date:desc" }}
-          {{ posts }}
-            <li><a href="{{ url }}">{{ title }}</a></li>
-          {{ /posts }}
-        {{ /collection:posts }}
-      </ul>
+    </div>
+    <div class="space-y-2">
+      {{ collection:posts as="posts" limit="10" sort="date:desc" }}
+        {{ posts }}
+          <div class="pb-3 border-b">
+            <a href="{{ url }}" class="hover:opacity-70 transition flex justify-between items-center gap-[6px]">
+              <p>{{ title }}</p>
+              <p class="font-mono text-xs text-gray-500">{{ date format="m.d.y" }}</p>
+            </a>
+          </div>
+        {{ /posts }}
+      {{ /collection:posts }}
     </div>
   </section>
   
