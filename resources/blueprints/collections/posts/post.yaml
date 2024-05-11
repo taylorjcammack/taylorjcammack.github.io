@@ -34,6 +34,7 @@ tabs:
               type: bard
               display: Content
               container: assets
+              remove_empty_nodes: true
               sets:
                 main:
                   display: Main

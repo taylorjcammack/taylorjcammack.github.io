@@ -9,7 +9,11 @@ export default {
     ],
 
     theme: {
-        extend: {},
+        extend: {
+          fontFamily: {
+            header: 'IBM Plex Serif',
+          },
+        },
         
     },
 

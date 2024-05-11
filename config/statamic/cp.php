@@ -38,7 +38,11 @@ return [
     */
 
     'widgets' => [
-
+      [ 
+        'template' => 'widgets/notes',
+        'type' => 'template',
+        'width' => 100,
+      ], 
     ],
 
     /*

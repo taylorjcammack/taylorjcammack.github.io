@@ -11,6 +11,19 @@ html {
     margin-bottom: 10px;
     font-size: 20px;
   }
+
+  blockquote {
+    border-color: #facc15;
+    background-color: #fffbeb;
+    font-weight: 400;
+    color: #451a03;
+    padding-block: 1px;
+    padding-inline: 30px;
+    font-style: normal;
+    font-size: clamp(1rem, 1.0385rem + 0.4615vw, 1.15rem);
+    font-family: 'IBM Plex Serif';
+  }
+
   ul {
     li {
       margin-block: 0 !important;

@@ -6,8 +6,8 @@
       Howdy!
     </h1>
   
-    <div class="prose leading-[1.5]">
-      <p>My name is Taylor. I'm a web developer based out of East Texas.</p>
+    <div class="prose leading-[1.5] max-w-[400px] text-balance">
+      <p>My name is Taylor. I'm a guy in East Texas. Build websites for work. Do other stuff as well.</p>
     </div>
   </div>
 </div>
@@ -19,7 +19,7 @@
     <div class="space-y-2">
       {{ collection:posts as="posts" limit="10" sort="date:desc" }}
         {{ posts }}
-          <div class="pb-3 border-b">
+          <div class="pb-3 border-b last:border-none">
             <a href="{{ url }}" class="hover:opacity-70 transition flex justify-start items-center gap-x-[15px]">
               <p class="font-mono text-xs text-gray-500 translate-y-[1px]">{{ date format="m.d.y" }}</p>
               <p>{{ title }}</p>
