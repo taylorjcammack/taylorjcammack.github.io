@@ -1,11 +1,18 @@
-<div class="pb-4 -mt-2 md:pb-6 md:mt-0">
-  <a href="/" class="transition hover:opacity-70">👈 <span class="inline-block pl-1 uppercase text-[14px] font-bold">Back</span></a>
-</div>
+<div class="relative p-6 pt-12 pb-8 mt-6 mb-20 -mx-6 bg-white border lg:mt-12 lg:mx-0 lg:px-12 lg:py-16">
 
-<div class="p-6 pb-8 mb-20 -mx-6 bg-white border lg:mx-0 lg:px-12 lg:py-10">
+  <div class="absolute flex items-center gap-2 bg-white border rounded-full left-2 lg:-left-3 -top-3">
+    <div class="grid place-content-center">
+      <a href="/">
+        <img src="{{ glide src="/assets/hello.jpg" width="100" height="100" }}" class="w-8 h-auto rounded-full shadow-lg" />
+      </a>
+    </div>
+    <a href="/" class="pr-4 transition hover:opacity-70">
+      👈 <span class="inline-block pl-1 uppercase text-[14px] font-bold">Back</span>
+    </a>
+  </div>
 
   <div>
-    <p class="text-gray-400 text-[14px] uppercase font-medium">
+    <p class="text-violet-400 text-[14px] uppercase font-medium">
       {{ date format="F j, Y"}}
     </p>
     <h1 class="font-header text-[clamp(1.5rem,1.2857rem+1.1429vw,2rem)] font-medium">
@@ -34,7 +41,7 @@
     </div>
   {{ /if }}
 
-  <div class="mt-12 -mx-6 -mb-8 border-t lg:-mb-10 sm:grid sm:grid-cols-2 lg:-mx-12">
+  <div class="mt-12 -mx-6 -mb-8 border-t lg:-mb-16 sm:grid sm:grid-cols-2 lg:-mx-12">
     {{ collection:previous in="posts" as="prev" limit="1" sort="date:asc" }}
       <div class="grid px-3 py-3 border-b lg:py-4 sm:border-b-0 sm:border-r"> 
         {{ if no_results }}

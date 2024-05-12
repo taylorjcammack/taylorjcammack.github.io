@@ -15,14 +15,17 @@
 <div class="grid gap-2 md:grid-cols-8 md:gap-4">
   
   <section class="p-4 bg-white border md:col-start-4 md:col-span-5 md:row-start-1 md:row-span-2">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📬</span> Posts</h2>
+    <h2 class="flex items-center gap-3 mb-3 italic font-header">
+      <span class="text-[20px]">📬</span> 
+      posts
+    </h2>
     <div class="space-y-2">
       {{ collection:posts as="posts" limit="10" sort="date:desc" }}
         {{ posts }}
           <div class="pb-3 border-b last:border-none">
             <a href="{{ url }}" class="hover:opacity-70 transition flex justify-start items-center gap-x-[15px]">
               <p class="font-mono text-xs text-gray-500 translate-y-[1px]">{{ date format="m.d.y" }}</p>
-              <p>{{ title }}</p>
+              <p class="font-base font-header">{{ title }}</p>
             </a>
           </div>
         {{ /posts }}
@@ -31,7 +34,7 @@
   </section>
   
   <section class="p-4 bg-white border md:col-span-3">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">🪴</span> Links</h2>
+    <h2 class="flex items-center gap-3 mb-3 italic font-header"><span class="text-[20px]">🪴</span> links</h2>
     <div class="prose">
       <ul>
         <li>
@@ -54,7 +57,10 @@
   </section>
 
   <section class="p-4 bg-white border md:col-span-3">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">📚</span> Books</h2>
+    <h2 class="flex items-center gap-3 mb-3 italic font-header">
+      <span class="text-[20px]">📚</span> 
+      books
+    </h2>
     <div class="grid p-6 bg-[#f0e5cf] place-content-center">
       <a href="{{ link:119e325e-1672-42a9-b4cc-e0751afd947b }}">
         <img src="{{ glide src="assets/the-drowned-and-the-saved.jpg" }}" class="max-w-[125px] h-auto shadow-lg hover:scale-[1.05] transition">
@@ -63,7 +69,11 @@
   </section>
 
   <section class="p-4 bg-white border md:col-span-5">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">🧑‍🏫</span> New words/phrases</h2>
+    
+    <h2 class="flex items-center gap-3 mb-3 italic font-header">
+      <span class="text-[20px]">🐘</span> 
+      learnin
+    </h2>
     <div class="prose">
       <ul>
         <li><strong>colloquy:</strong> a conversation; a gathering for discussion of theological questions.</li>
@@ -75,7 +85,10 @@
   </section>
 
   <section class="p-4 bg-white border md:col-span-3">
-    <h2 class="flex items-center gap-3 text-[20px] font-bold mb-2"><span class="text-[14px]">🧰</span> This Site</h2>
+    <h2 class="flex items-center gap-3 mb-3 italic font-header">
+      <span class="text-[20px]">🔬</span> 
+      about this site
+    </h2>
     <div class="prose">
       <ul>
         <li>Statamic<sup>❤️</sup> w/ SSG</li>

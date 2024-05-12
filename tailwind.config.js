@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -9,6 +11,11 @@ export default {
     ],
 
     theme: {
+        colors: {
+          white: colors.white,
+          gray: colors.slate,
+          violet: colors.violet
+        },
         extend: {
           fontFamily: {
             header: 'IBM Plex Serif',
