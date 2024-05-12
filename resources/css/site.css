@@ -13,15 +13,35 @@ html {
   }
 
   blockquote {
-    border-color: #facc15;
+    border-left: 0;
     background-color: #fffbeb;
     font-weight: 400;
     color: #451a03;
     padding-block: 1px;
     padding-inline: 30px;
     font-style: normal;
-    font-size: clamp(1rem, 1.0385rem + 0.4615vw, 1.15rem);
-    font-family: 'IBM Plex Serif';
+    position: relative;
+    margin-block: 35px;
+
+    &:before {
+      content: '📖';
+      position: absolute;
+      left: -6px;
+      top: -6px;
+      font-size: 24px;
+      height: 32px;
+      width: 32px;
+      background-color: #facd14;
+      display: grid;
+      place-content: center;
+      border-radius: 99999px;
+    }
+    
+    p {
+      font-size: 1rem;
+      font-family: 'IBM Plex Serif';
+
+    }
   }
 
   ul {
