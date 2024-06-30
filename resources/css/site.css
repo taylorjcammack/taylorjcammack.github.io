@@ -16,7 +16,7 @@ html {
   }
 
   blockquote {
-    @apply border-offblue bg-paper py-1 px-8 text-offblue text-lg font-text font-normal not-italic;
+    @apply border-offblue bg-paper py-1 px-8 text-offblue leading-normal md:text-lg font-text font-normal not-italic;
   }
 
   ul {
