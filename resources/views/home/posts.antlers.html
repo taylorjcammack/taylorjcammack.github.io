@@ -14,8 +14,10 @@
             {{ if image }}
                 <img src="{{ glide:image width="100" height="100" fit="crop_focal" }}" alt="{{ image:alt }}" class="w-[50px] h-auto rounded-lg">
             {{ /if }}
-            <div>
-                <p class="font-base font-header text-lg">{{ title }}</p>
+            <div class="grid gap-1">
+                <p class="font-base font-header sm:text-lg leading-[1.25]">
+                    {{ title }}
+                </p>
                 <div class="flex flex-wrap justify-start gap-2 mt-1">
                     {{ tags }}
                       <p class="px-2 py-[1px] text-[11px] font-medium bg-paper text-offpink rounded whitespace-nowrap">
@@ -26,7 +28,7 @@
 
             </div>
         </div>
-        <span class="bg-paper text-sm py-0.5 px-2 rounded-lg font-semibold text-offblue hover:opacity-70 transition">
+        <span class="hidden sm:block bg-paper text-sm py-0.5 px-2 rounded-lg font-semibold text-offblue hover:opacity-70 transition">
             Read
         </span>
     </div>
