@@ -4,7 +4,7 @@
 
 html {
   font-family: 'Inter', serif;
-  @apply bg-violet-50;
+  @apply bg-paper;
 }
 
 .prose {
@@ -16,7 +16,7 @@ html {
   }
 
   blockquote {
-    @apply border-violet-200 bg-violet-50 py-1 px-8 text-violet-800 text-lg font-text font-normal not-italic;
+    @apply border-offblue bg-paper py-1 px-8 text-offblue text-lg font-text font-normal not-italic;
   }
 
   ul {

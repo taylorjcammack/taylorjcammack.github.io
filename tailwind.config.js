@@ -14,7 +14,10 @@ export default {
         colors: {
           white: colors.white,
           gray: colors.slate,
-          violet: colors.violet
+          violet: colors.violet,
+          paper: 'hsl(75, 13%, 86%)',
+          offpink: 'hsl(12, 17%, 57%)',
+          offblue: 'hsl(225, 10%, 22%)',
         },
         fontFamily: {
           'text': ['Inter', 'sans-serif'],

@@ -1,9 +1,22 @@
-<div class="rounded-lg transition bg-white p-4" href="{{ url }}">
-    <div class="flex justify-start items-center gap-x-[15px]">
-        ℹ️
-        <p class="font-base font-header text-lg">{{ title }}</p>
+<div class="relative rounded-lg rounded-tr-none bg-white hover:border-violet-400 transition p-4" href="{{ url }}">
+    <div class="absolute right-0 bottom-full bg-white rounded-t-lg py-1 px-2 border-b border-violet-100 flex items-center gap-2">
+        <p class="font-mono text-xs text-offpink font-medium">
+            {{ date format="m.d.y" }}
+        </p>
+        <div class="font-mono text-xs font-medium text-violet-400">
+            /
+        </div>
+        <div class="flex items-center gap-1">
+            <span class="text-[10px] translate-y-[1px]">🪴</span>
+            <p class="font-mono text-xs font-medium">Word</p>
+        </div>
     </div>
-    <div class="prose max-w-none pl-[35px] *:font-text">
+    <div class="flex justify-start items-center gap-x-[15px]">
+        <p class="font-base font-header text-lg">
+            {{ title }}
+        </p>
+    </div>
+    <div class="prose prose-sm leading-[1.5] md:prose max-w-none *:font-text">
         {{ text }}
     </div>
 </div>

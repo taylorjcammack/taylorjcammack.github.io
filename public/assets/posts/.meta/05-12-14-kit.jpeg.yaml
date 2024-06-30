@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: Kit
+  focus: 28-56-2.7
 size: 895367
-last_modified: 1715540994
+last_modified: 1719368275
 width: 1440
 height: 1440
 mime_type: image/jpeg

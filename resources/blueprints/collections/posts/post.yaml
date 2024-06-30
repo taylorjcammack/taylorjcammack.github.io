@@ -13,6 +13,14 @@ tabs:
               validate:
                 - required
           -
+            handle: image
+            field:
+              max_files: 1
+              container: assets
+              folder: posts
+              type: assets
+              display: Image
+          -
             handle: content
             field:
               buttons:
@@ -77,3 +85,12 @@ tabs:
                 - tags
               display: Tags
               mode: select
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+              mode: select
+              max_items: 1

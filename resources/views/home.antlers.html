@@ -1,5 +1,5 @@
-<div class="max-w-[760px] mx-auto grid gap-3 mb-[50px]">
-  {{ collection from="posts|words|books" as="items" limit="10" sort="date:desc" }}
+<div class="max-w-[760px] mx-auto grid gap-[50px] mb-[50px]">
+  {{ collection from="posts|words" as="items" sort="date:desc" }}
     {{ items }}
       {{ partial src="home/{collection}" }}
     {{ /items }}

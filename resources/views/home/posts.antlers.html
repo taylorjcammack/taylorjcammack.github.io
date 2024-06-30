@@ -1,7 +1,36 @@
-<a class="border-2 border-violet-200 rounded-lg bg-white hover:border-violet-400 transition p-4" href="{{ url }}">
-    <div class="flex justify-start items-center gap-x-[15px]">
-        ✏️
-        <p class="font-mono text-xs text-violet-500 font-medium translate-y-[1px]">{{ date format="m.d.y" }}</p>
-        <p class="font-base font-header text-lg">{{ title }}</p>
+<a class="relative rounded-lg rounded-tr-none bg-white hover:border-violet-400 transition p-4" href="{{ url }}">
+    <div class="absolute right-0 bottom-full bg-white rounded-t-lg py-1 px-2 border-b border-violet-100 flex items-center gap-2">
+        <p class="font-mono text-xs text-offpink font-medium">{{ date format="m.d.y" }}</p>
+        <div class="font-mono text-xs font-medium text-violet-400">
+            /
+        </div>
+        <div class="flex items-center gap-1">
+            <span class="text-[10px] translate-y-[1px]">✏️</span>
+            <p class="font-mono text-xs font-medium">Post</p>
+        </div>
+    </div>
+    <div class="flex items-center justify-between gap-x-[15px]">
+        <div class="flex items-center gap-5">
+            {{ if image }}
+                <img src="{{ glide:image width="100" height="100" fit="crop_focal" }}" alt="{{ image:alt }}" class="w-[50px] h-auto rounded-lg">
+            {{ /if }}
+            <div>
+                <p class="font-base font-header text-lg">{{ title }}</p>
+                <div class="flex flex-wrap justify-start gap-2 mt-1">
+                    {{ tags }}
+                      <p class="px-2 py-[1px] text-[11px] font-medium bg-paper text-offpink rounded whitespace-nowrap">
+                        {{ title }}
+                      </p>
+                    {{ /tags }}
+                  </div>
+
+            </div>
+        </div>
+        <span class="bg-paper text-sm py-0.5 px-2 rounded-lg font-semibold text-offblue hover:opacity-70 transition">
+            Read
+        </span>
+    </div>
+    <div class="prose max-w-none pl-[35px]">
+        {{ text }}
     </div>
 </a>

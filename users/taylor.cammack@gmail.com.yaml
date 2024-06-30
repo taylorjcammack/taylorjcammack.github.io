@@ -6,9 +6,15 @@ preferences:
   collections:
     posts:
       columns:
-        - title
         - date
+        - title
+        - image
         - tags
         - status
     words:
       after_save: create_another
+      columns:
+        - date
+        - title
+        - text
+        - status
