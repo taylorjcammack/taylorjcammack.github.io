@@ -16,12 +16,10 @@ export default {
           gray: colors.slate,
           violet: colors.violet
         },
-        extend: {
-          fontFamily: {
-            header: 'IBM Plex Serif',
-          },
-        },
-        
+        fontFamily: {
+          'text': ['Inter', 'sans-serif'],
+          'header': ['"Source Serif 4"', 'serif']
+        },        
     },
 
     plugins: [

@@ -1,4 +1,4 @@
-title: Post
+title: Book
 tabs:
   main:
     display: Main
@@ -21,24 +21,20 @@ tabs:
                 - bold
                 - italic
                 - underline
-                - strikethrough
                 - unorderedlist
                 - orderedlist
-                - aligncenter
-                - codeblock
+                - removeformat
                 - horizontalrule
                 - quote
                 - anchor
+                - image
                 - table
-                - removeformat
+              remove_empty_nodes: false
               type: bard
               display: Content
-              container: assets
-              remove_empty_nodes: true
               sets:
                 main:
                   display: Main
-                  icon: media-image-camera
                   sets:
                     image:
                       display: Image
@@ -69,11 +65,3 @@ tabs:
               default: now
               validate:
                 - required
-          -
-            handle: tags
-            field:
-              type: terms
-              taxonomies:
-                - tags
-              display: Tags
-              mode: select

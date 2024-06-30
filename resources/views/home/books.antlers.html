@@ -1,0 +1,10 @@
+<a class="border-2 border-violet-200 bg-white rounded-lg transition p-4" href="{{ url }}">
+    <div class="flex justify-start items-center gap-x-[15px]">
+        📕
+        <p class="font-mono text-xs text-violet-500 font-medium translate-y-[1px]">{{ date format="m.d.y" }}</p>
+        <p class="font-base font-header text-lg">{{ title }}</p>
+    </div>
+    <div class="prose max-w-none pl-[35px]">
+        {{ text }}
+    </div>
+</a>

@@ -1,0 +1,36 @@
+title: Word
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: text
+            field:
+              buttons:
+                - bold
+                - italic
+                - anchor
+                - removeformat
+              remove_empty_nodes: false
+              type: bard
+              display: Text
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

@@ -1,13 +1,9 @@
 ---
-id: 119e325e-1672-42a9-b4cc-e0751afd947b
-blueprint: post
+id: d5f918ac-187a-4c39-951b-2919bdd3d0e0
+blueprint: book
 title: 'The Drowned and the Saved'
-tags:
-  - holocaust
-  - israel-palestine
-  - another-fucking-book-report
 updated_by: 46037f0c-7263-40a9-b8a0-1d390e6db9d3
-updated_at: 1715543334
+updated_at: 1719722552
 content:
   -
     type: set
@@ -15,7 +11,8 @@ content:
       id: lw2ehku7
       values:
         type: image
-        image: posts/the-drowned-and-the-saved.jpg
+        image:
+          - posts/the-drowned-and-the-saved.jpg
         halfisize_it: false
   -
     type: paragraph
@@ -190,7 +187,8 @@ content:
       id: lw3wyvjq
       values:
         type: image
-        image: posts/05-11-24-guardian-screenshot-israel-armaments.jpg
+        image:
+          - posts/05-11-24-guardian-screenshot-israel-armaments.jpg
         halfisize_it: false
   -
     type: paragraph

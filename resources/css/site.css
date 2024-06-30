@@ -3,45 +3,20 @@
 @import "tailwindcss/utilities";
 
 html {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Inter', serif;
+  @apply bg-violet-50;
 }
 
 .prose {
+  @apply font-header;
+
   h2 {
     margin-bottom: 10px;
     font-size: 20px;
   }
 
   blockquote {
-    border-left: 0;
-    background-color: #f5f3ff;
-    font-weight: 400;
-    color: #451a03;
-    padding-block: 1px;
-    padding-inline: 30px;
-    font-style: normal;
-    position: relative;
-    margin-block: 35px;
-
-    &:before {
-      content: '📖';
-      position: absolute;
-      left: -6px;
-      top: -6px;
-      font-size: 24px;
-      height: 32px;
-      width: 32px;
-      background-color: #facd14;
-      display: grid;
-      place-content: center;
-      border-radius: 99999px;
-    }
-    
-    p {
-      font-size: 1rem;
-      font-family: 'IBM Plex Serif';
-
-    }
+    @apply border-violet-200 bg-violet-50 py-1 px-8 text-violet-800 text-lg font-text font-normal not-italic;
   }
 
   ul {

@@ -10,3 +10,5 @@ preferences:
         - date
         - tags
         - status
+    words:
+      after_save: create_another

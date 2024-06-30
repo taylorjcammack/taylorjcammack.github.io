@@ -1,18 +1,7 @@
-<div class="relative p-6 pt-12 pb-8 mt-6 mb-20 -mx-6 bg-white border lg:mt-12 lg:mx-0 lg:px-12 lg:py-16">
-
-  <div class="absolute flex items-center gap-2 bg-white border rounded-full left-2 lg:-left-3 -top-3">
-    <div class="grid place-content-center">
-      <a href="/">
-        <img src="{{ glide src="/assets/hello.jpg" width="100" height="100" }}" class="w-8 h-auto rounded-full shadow-lg" />
-      </a>
-    </div>
-    <a href="/" class="pr-4 transition hover:opacity-70">
-      👈 <span class="inline-block pl-1 uppercase text-[14px] font-bold">Back</span>
-    </a>
-  </div>
+<div class="max-w-[760px] mx-auto mb-[150px] bg-white rounded-lg p-5 md:p-8">
 
   <div>
-    <p class="text-violet-400 text-[14px] uppercase font-medium">
+    <p class="text-violet-600 text-[14px] uppercase font-medium font-text">
       {{ date format="F j, Y"}}
     </p>
     <h1 class="font-header text-[clamp(1.5rem,1.2857rem+1.1429vw,2rem)] font-medium">
@@ -21,7 +10,7 @@
   </div>
   
   <div class="mt-5">
-    <div class="prose max-w-none">
+    <div class="prose lg:prose-lg max-w-none">
       {{ content }}
         {{ partial src="builder/{type}" }}
       {{ /content }}
@@ -29,54 +18,38 @@
   </div>
 
   {{ if tags }}
-    <div class="pt-3 mt-8 border-t">
-      <p class="font-bold text-gray-800 uppercase text-[13px] mb-2">
-        🏷️ Tags
-      </p>
-      <div class="flex flex-wrap gap-2">
-        {{ tags }}
-          <p class="px-2 py-1 text-sm font-medium bg-[#fff2e2] border border-[#f7d0a0] rounded whitespace-nowrap">{{ title }}</p>
-        {{ /tags }}
-      </div>
+    <div class="flex flex-wrap justify-center gap-2 mt-6">
+      {{ tags }}
+        <p class="px-2 py-0.5 text-sm font-medium bg-violet-100 border border-violet-200 text-violet-800 rounded whitespace-nowrap">{{ title }}</p>
+      {{ /tags }}
     </div>
   {{ /if }}
 
-  <div class="mt-12 -mx-6 -mb-8 border-t lg:-mb-16 sm:grid sm:grid-cols-2 lg:-mx-12">
+  <div class="mt-12 border-2 border-violet-200">
     {{ collection:previous in="posts" as="prev" limit="1" sort="date:asc" }}
-      <div class="grid px-3 py-3 border-b lg:py-4 sm:border-b-0 sm:border-r"> 
-        {{ if no_results }}
-          <p class="inline-block font-header text-[14px] text-gray-400 italic">
-            le début
-          </p>
-        {{ /if }}
-        
-        {{ prev }}
-          <a href="{{ url }}" class="flex items-center justify-between w-full gap-2">
-            <span>👈</span>
-            <p class="text-sm font-header">{{ title }}</p>
-          </a>
-        {{ /prev }}
-      </div>
+      {{ if ! no_results }}
+        <div class="grid px-3 py-3 lg:py-4">         
+          {{ prev }}
+            <a href="{{ url }}" class="flex items-center w-full gap-2">
+              <span>👈</span>
+              <p class="font-header">{{ title }}</p>
+            </a>
+          {{ /prev }}
+        </div>
+      {{ /if }}
     {{ /collection:previous }}
 
     {{ collection:next in="posts" as="next" limit="1" sort="date:asc" }}
-      <div class="flex flex-wrap px-4 py-3 lg:py-4">
-        {{ if no_results }}
-          <p class="inline-block font-header text-[14px] text-gray-400 italic">
-            fin
-          </p>
-        {{ /if }}
-        
-        {{ next }}
-        <a href="{{ url }}" class="flex items-center justify-between w-full gap-2">
-          <p class="text-sm font-header">{{ title }}</p>
-          <span>👉</span>
-        </a>
-        {{ /next }}
-      </div>
+      {{ if !no_results }}
+        <div class="flex flex-wrap px-4 py-3 lg:py-4">        
+          {{ next }}
+            <a href="{{ url }}" class="flex items-center justify-between w-full gap-2">
+              <p class="font-header">{{ title }}</p>
+              <span>👉</span>
+            </a>
+          {{ /next }}
+        </div>
+      {{ /if }}
     {{ /collection:next }}
-    <a href="">
-
-    </a>
   </div>
 </div>

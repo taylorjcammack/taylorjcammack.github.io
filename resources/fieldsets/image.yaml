@@ -1,0 +1,15 @@
+title: Image
+fields:
+  -
+    handle: image
+    field:
+      container: assets
+      type: assets
+      display: Image
+      width: 75
+  -
+    handle: halfisize_it
+    field:
+      type: toggle
+      display: 'Halfisize It'
+      width: 25
