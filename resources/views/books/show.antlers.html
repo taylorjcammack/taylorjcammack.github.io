@@ -1,0 +1,29 @@
+<div class="max-w-[760px] mx-auto mb-[150px] bg-white rounded-lg p-5 md:p-8">
+
+    <div>
+      <p class="text-violet-600 text-[14px] uppercase font-medium font-text">
+        {{ date format="F j, Y"}}
+      </p>
+      <h1 class="font-header text-[clamp(1.5rem,1.2857rem+1.1429vw,2rem)] font-medium">
+        {{ title }}
+      </h1>
+    </div>
+    
+    <div class="mt-5">
+      <div class="prose lg:prose-lg max-w-none">
+        {{ content }}
+          {{ partial src="builder/{type}" }}
+        {{ /content }}
+      </div>
+    </div>
+  
+    {{ if tags }}
+      <div class="flex flex-wrap justify-center gap-2 mt-6">
+        {{ tags }}
+          <p class="px-2 py-0.5 text-sm font-medium bg-violet-100 border border-violet-200 text-violet-800 rounded whitespace-nowrap">{{ title }}</p>
+        {{ /tags }}
+      </div>
+    {{ /if }}
+    
+  </div>
+  

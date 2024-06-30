@@ -7,6 +7,7 @@ fields:
       type: assets
       display: Image
       width: 75
+      max_files: 1
   -
     handle: halfisize_it
     field:
